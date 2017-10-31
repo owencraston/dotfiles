@@ -71,7 +71,8 @@ DEFAULT_USER=`whoami`
 # else
 #   export EDITOR='mvim'
 # fi
-
+# set editor enviroment variable to vim
+export EDITOR=vim
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
