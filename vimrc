@@ -37,6 +37,8 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'nvie/vim-flake8'
 "Rails
 Plugin 'tpope/vim-rails'
+" indent guides
+Plugin 'Yggdroot/indentLine'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -74,6 +76,14 @@ set nu
 color dracula
 " backspace
 set backspace=indent,eol,start
+" relative/absolute line numbers hybrid
+:set number relativenumber
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 " fonts and icons
 set guifont=:Knack\ Nerd\ Font:h11
 let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
