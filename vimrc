@@ -37,8 +37,6 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'nvie/vim-flake8'
 "Rails
 Plugin 'tpope/vim-rails'
-" indent guides
-Plugin 'Yggdroot/indentLine'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -64,11 +62,12 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "
-
+" nerd tree
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+map <C-n> :NERDTreeToggle<CR>
+
 syntax on
 set clipboard=unnamed
 set encoding=utf-8
@@ -78,12 +77,18 @@ color dracula
 set backspace=indent,eol,start
 " relative/absolute line numbers hybrid
 :set number relativenumber
-
 augroup numbertoggle
   autocmd!
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
+"remember last position 
+if has("autocmd")
+    autocmd BufReadPost *
+    \ if line("\'") > 0 && line("\'") <= line("$") |
+        \ exe "normal g`" |
+    \ endif
+endif
 " fonts and icons
 set guifont=:Knack\ Nerd\ Font:h11
 let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
@@ -93,7 +98,7 @@ let g:airline_powerline_fonts = 1
 au BufNewFile,BufRead *.js, *.html, *.scss, *.rb, *.ts,
     \ set tabstop=2
     \ set softtabstop=2
-    \ set shiftwidth=2
+    \ set shiftwidth=s2
 " Python config
 au BufNewFile,BufRead *.py
     \ set tabstop=4
