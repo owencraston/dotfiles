@@ -107,7 +107,11 @@ au BufNewFile,BufRead *.py
     \ set expandtab
     \ set autoindent
     \ set fileformat=unix
-"flag whitespace
+
+" add command to copy buffer path
+:command! CopyBuffer let @+ = expand('%:p')
+
+" flag whitespace
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 let g:ycm_autoclose_preview_window_after_completion=1
