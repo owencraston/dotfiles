@@ -87,9 +87,16 @@ export EDITOR=vim
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# alias dev="cd ~/src/github.com/Shopify/shopify"
+alias cdcc="cd ~/Documents/PersonalDevelopment/coincount/coincount"
 
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
 export PATH="$HOME/.yarn/bin:$PATH"
+# starscrem config
+export HADOOP_USER_NAME=owencraston
+export HDFS_USER=owencraston
+export HADOOP_CONF_DIR=$HOME/src/github.com/Shopify/starscream/.dev/starscream/spark/current/conf/conf.cloudera.yarn
+
+export PATH=/usr/local/lib/ruby/gems/2.0.0/bin:$PATH
+export PATH=/usr/local/opt/ruby20/bin:$PATH

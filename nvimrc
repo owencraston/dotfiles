@@ -29,6 +29,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'farmergreg/vim-lastplace'
 "python autoindent
 Plugin 'vim-scripts/indentpython.vim'
+" autocomplete
+Plugin 'Valloric/YouCompleteMe'
 "Icons
 Plugin 'ryanoasis/vim-devicons'
 "PEP8
@@ -93,9 +95,18 @@ let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exac
 let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
 let g:airline_powerline_fonts = 1
 " spacing config
-au BufNewFile,BufRead *.js,*.html,*.scss,*.rb,*.ts, set tabstop=2 softtabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.js, *.html, *.scss, *.rb, *.ts,
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=s2
 " Python config
-au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent fileformat=unix
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
 
 " add command to copy buffer path
 :command! CopyBuffer let @+ = expand('%:p')
