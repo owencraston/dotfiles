@@ -7,7 +7,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Colour theme
 Plug 'ayu-theme/ayu-vim'
-
+" Nerdtree 
+Plug 'scrooloose/nerdtree',
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
 
@@ -34,3 +35,6 @@ set termguicolors     " enable true colors support
 let ayucolor='mirage' " for mirage version of theme
 let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
+
+" autoload nerdtree
+autocmd vimenter * NERDTree
