@@ -67,12 +67,12 @@ DEFAULT_USER=`whoami`
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+# 	export EDITOR=vim
 # else
-#   export EDITOR='mvim'
+# 	export EDITOR=nvim
 # fi
-# set editor enviroment variable to vim
-export EDITOR=vim
+# set editor enviroment variable to neovim
+export EDITOR=nvim
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
