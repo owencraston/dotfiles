@@ -42,3 +42,6 @@ let g:lightline = {'colorscheme': 'wombat',}
 
 " autoload nerdtree
 autocmd vimenter * NERDTree
+" close nvim if nerdtree is the only open buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
