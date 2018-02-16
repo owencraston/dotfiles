@@ -11,7 +11,8 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'scrooloose/nerdtree',
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
-
+" lightline
+Plug 'itchyny/lightline.vim'
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
@@ -35,6 +36,9 @@ set termguicolors     " enable true colors support
 let ayucolor='mirage' " for mirage version of theme
 let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
+
+" lightline colour
+let g:lightline = {'colorscheme': 'wombat',}
 
 " autoload nerdtree
 autocmd vimenter * NERDTree
