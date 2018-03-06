@@ -13,6 +13,12 @@ Plug 'scrooloose/nerdtree',
 Plug 'junegunn/vim-easy-align'
 " lightline
 Plug 'itchyny/lightline.vim'
+" ctrlp
+Plug 'ctrlpvim/ctrlp.vim'
+" gitgutter
+Plug 'airblade/vim-gitgutter'
+" linting
+Plug 'w0rp/ale'
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
@@ -44,4 +50,5 @@ let g:lightline = {'colorscheme': 'wombat',}
 autocmd vimenter * NERDTree
 " close nvim if nerdtree is the only open buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
+" hide .pyc files
+let NERDTreeIgnore = ['\.pyc$']
