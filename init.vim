@@ -6,13 +6,14 @@ call plug#begin('~/.config/nvim/plugged')
 " Make sure you use single quotes
 
 " Colour theme
-Plug 'ayu-theme/ayu-vim'
+Plug 'mhartington/oceanic-next'
 " Nerdtree 
 Plug 'scrooloose/nerdtree',
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
-" lightline
-Plug 'itchyny/lightline.vim'
+" airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " ctrlp
 Plug 'ctrlpvim/ctrlp.vim'
 " gitgutter
@@ -39,12 +40,14 @@ augroup numbertoggle
 augroup END
 
 set termguicolors     " enable true colors support
-let ayucolor='mirage' " for mirage version of theme
-let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+colorscheme OceanicNext " set colour scheme
 
-" lightline colour
-let g:lightline = {'colorscheme': 'wombat',}
+" enable powerline fonts
+let g:airline_powerline_fonts = 1
+" airline themes
+let g:airline_theme='oceanicnext'
 
 " autoload nerdtree
 autocmd vimenter * NERDTree
