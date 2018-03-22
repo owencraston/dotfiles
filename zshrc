@@ -75,7 +75,8 @@ DEFAULT_USER=`whoami`
 export EDITOR=nvim
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
+# set git editor as neovim
+export GIT_EDITOR=nvim
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 

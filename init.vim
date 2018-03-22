@@ -20,6 +20,12 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 " linting
 Plug 'w0rp/ale'
+" autocomplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Track the engine.
+Plug 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
@@ -55,3 +61,6 @@ autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " hide .pyc files
 let NERDTreeIgnore = ['\.pyc$']
+let g:ctrlp_custom_ignore = 'DS_Store\|pyc'
+" enable deoplete
+let g:deoplete#enable_at_startup = 1
