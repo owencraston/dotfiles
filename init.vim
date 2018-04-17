@@ -24,6 +24,8 @@ Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Track the engine.
 Plug 'SirVer/ultisnips'
+" editor config, in case the .editor config file is provided
+Plug 'editorconfig/editorconfig-vim'
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 " Any valid git URL is allowed
