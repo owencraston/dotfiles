@@ -55,6 +55,9 @@ let g:airline_powerline_fonts = 1
 " airline themes
 let g:airline_theme='oceanicnext'
 
+" add command to copy buffer path
+:command! CopyBuffer let @+ = expand('%:p')
+
 " autoload nerdtree
 autocmd vimenter * NERDTree
 " close nvim if nerdtree is the only open buffer
@@ -64,3 +67,14 @@ let NERDTreeIgnore = ['\.pyc$']
 let g:ctrlp_custom_ignore = 'DS_Store\|pyc'
 " enable deoplete
 let g:deoplete#enable_at_startup = 1
+" highlight extra whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+au ColorScheme * highlight ExtraWhitespace guibg=red
+au BufEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhiteSpace /\s\+$/
+" remove trailing whitespace
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+endfunction
+autocmd FileType c,cpp,python,ruby,java autocmd BufWritePre <buffer> :call TrimWhiteSpace()
