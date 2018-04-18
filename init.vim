@@ -7,8 +7,10 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Colour theme
 Plug 'mhartington/oceanic-next'
-" Nerdtree 
+" Nerdtree
 Plug 'scrooloose/nerdtree',
+" nerd tree git
+Plug 'Xuyuanp/nerdtree-git-plugin'
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
 " airline
@@ -60,8 +62,8 @@ let g:airline_theme='oceanicnext'
 " add command to copy buffer path
 :command! CopyBuffer let @+ = expand('%:p')
 
-" autoload nerdtree
-autocmd vimenter * NERDTree
+" autoload nerdtree but not on git commits
+autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
 " close nvim if nerdtree is the only open buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " hide .pyc files
