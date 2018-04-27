@@ -82,4 +82,9 @@ au InsertLeave * match ExtraWhiteSpace /\s\+$/
 function! TrimWhiteSpace()
     %s/\s\+$//e
 endfunction
-autocmd FileType c,cpp,python,ruby,java autocmd BufWritePre <buffer> :call TrimWhiteSpace()
+autocmd FileType c,cpp,python,ruby,java,go autocmd BufWritePre <buffer> :call TrimWhiteSpace()
+" vim go settings
+let g:go_fmt_command = 'goimports'
+let g:go_def_mapping_enabled = 0
+let g:go_highlight_types = 1
+let g:go_doc_keywordprg_enabled = 0
