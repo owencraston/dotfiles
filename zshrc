@@ -8,7 +8,7 @@ export ZSH=/Users/owencraston/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="owen_custom_theme"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -103,3 +103,5 @@ export HADOOP_CONF_DIR=$HOME/src/github.com/Shopify/starscream/.dev/starscream/s
 export PATH=/usr/local/lib/ruby/gems/2.0.0/bin:$PATH
 compdef _chctx chctx
 compdef _chns chns
+# go
+GOPATH=$HOME/go

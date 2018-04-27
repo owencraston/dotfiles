@@ -32,7 +32,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'honza/vim-snippets'
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-
+" golang support
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Initialize plugin system
 call plug#end()
 
