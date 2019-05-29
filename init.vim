@@ -64,7 +64,7 @@ let g:airline_theme='oceanicnext'
 :command! CopyBuffer let @+ = expand('%:p')
 
 " autoload nerdtree but not on git commits
-autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
+autocmd VimEnter * if &filetype !=# 'gitcommit' || &filetype !=# 'gitrebase' | NERDTree | endif
 " close nvim if nerdtree is the only open buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " hide .pyc files
