@@ -80,7 +80,8 @@ export EDITOR=nvim
 export GIT_EDITOR=nvim
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
-
+# config PATH
+export PATH=/usr/local/bin:$PATH
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -94,13 +95,11 @@ alias cdcc="cd ~/Documents/PersonalDevelopment/coincount/coincount"
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
-export PATH="$HOME/.yarn/bin:$PATH"
 # starscrem config
 export HADOOP_USER_NAME=owencraston
 export HDFS_USER=owencraston
 export HADOOP_CONF_DIR=$HOME/src/github.com/Shopify/starscream/.dev/starscream/spark/current/conf/conf.cloudera.yarn
 
-export PATH=/usr/local/lib/ruby/gems/2.0.0/bin:$PATH
 compdef _chctx chctx
 compdef _chns chns
 # go
