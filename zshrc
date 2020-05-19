@@ -8,7 +8,11 @@ export ZSH=/Users/owencraston/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster_kube_context"
+# ZSH_THEME="agnoster_kube_context"
+# ZSH_THEME="spaceship"
+# ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL9K_MODE="awesome-patched"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -52,7 +56,10 @@ ZSH_THEME="agnoster_kube_context"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -81,8 +88,13 @@ export GIT_EDITOR=nvim
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 # config PATH
-export PATH=/usr/local/bin:$PATH
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# export PATH=/usr/local/bin:$PATH
+#export PATH=/install/prefix/bin:$PATH
+export C_INCLUDE_PATH=/install/prefix/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/install/prefix/include:$CPLUS_INCLUDE_PATH
+export LIBRARY_PATH=/install/prefix/lib:$LIBRARY_PATH
+export DYLD_LIBRARY_PATH=/install/prefix/lib:$LD_LIBRARY_PATH
+ #Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
@@ -90,9 +102,9 @@ export PATH=/usr/local/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cdcc="cd ~/Documents/PersonalDevelopment/coincount/coincount"
-
-
+alias refresh="source ~/.zshrc"
+alias cdgg="cd ~/src/personal/react-native/garden-guru/GardenGuru"
+alias cdp="cd ~/src/personal"
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
 # starscrem config
@@ -104,3 +116,18 @@ compdef _chctx chctx
 compdef _chns chns
 # go
 GOPATH=$HOME/go
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+# android studio
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
