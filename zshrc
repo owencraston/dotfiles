@@ -69,9 +69,9 @@ plugins=(
 )
 
 ZSH_DISABLE_COMPFIX="true"
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
-source /usr/local/share/chruby/chruby.sh
+# source /usr/local/share/chruby/chruby.sh
 DEFAULT_USER=`whoami`
 # User configuration
 
@@ -115,12 +115,12 @@ alias cdp="cd ~/src/personal"
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
 # starscrem config
-export HADOOP_USER_NAME=owencraston
-export HDFS_USER=owencraston
-export HADOOP_CONF_DIR=$HOME/src/github.com/Shopify/starscream/.dev/starscream/spark/current/conf/conf.cloudera.yarn
+# export HADOOP_USER_NAME=owencraston
+# export HDFS_USER=owencraston
+# export HADOOP_CONF_DIR=$HOME/src/github.com/Shopify/starscream/.dev/starscream/spark/current/conf/conf.cloudera.yarn
 
-compdef _chctx chctx
-compdef _chns chns
+# compdef _chctx chctx
+# compdef _chns chns
 # go
 GOPATH=$HOME/go
 fpath+=${ZDOTDIR:-~}/.zsh_functions
@@ -142,3 +142,4 @@ export PATH="/usr/local/sbin:$PATH"
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
 
 [[ -x /usr/local/bin/brew ]] && eval $(/usr/local/bin/brew shellenv)
+source ~/powerlevel10k/powerlevel10k.zsh-theme
