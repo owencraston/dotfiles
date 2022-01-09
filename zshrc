@@ -143,3 +143,4 @@ export PATH="/usr/local/sbin:$PATH"
 
 [[ -x /usr/local/bin/brew ]] && eval $(/usr/local/bin/brew shellenv)
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+source /Users/owencraston/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
