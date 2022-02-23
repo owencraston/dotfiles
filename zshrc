@@ -96,7 +96,7 @@ export GIT_EDITOR=nvim
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 # config PATH
-# export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 #export PATH=/install/prefix/bin:$PATH
 export C_INCLUDE_PATH=/install/prefix/include:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=/install/prefix/include:$CPLUS_INCLUDE_PATH
@@ -137,7 +137,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
+# export PATH="/usr/local/sbin:$PATH"
+
 
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
 
