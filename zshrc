@@ -112,6 +112,9 @@ export DYLD_LIBRARY_PATH=/install/prefix/lib:$LD_LIBRARY_PATH
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias refresh="source ~/.zshrc"
 alias cdp="cd ~/src/personal"
+alias cdc="cd ~/src/consensys"
+alias cdmm="cd ~/src/consensys/metamask-mobile"
+
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
 # starscrem config
