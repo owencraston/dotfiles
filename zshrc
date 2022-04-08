@@ -158,3 +158,7 @@ source /Users/owencraston/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# https://github.com/OWASP/SecureCodingDojo/wiki/Deploying-with-Docker
+export DATA_DIR=~/dojofiles
+export CHALLENGE_MASTER_SALT=7f976668fecb0021c73671d2a57b845c350e5fdc0fbc8db866c37a775165cbf7
