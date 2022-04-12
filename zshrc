@@ -18,7 +18,7 @@ export ZSH=/Users/owencraston/.oh-my-zsh
 # ZSH_THEME="agnoster_kube_context"
 # ZSH_THEME="spaceship"
 # ZSH_THEME="agnoster"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE="awesome-patched"
 
 # Uncomment the following line to use case-sensitive completion.
