@@ -136,14 +136,16 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# python 3
+export PYTHON_HOME=$HOME/Library/Python/3.8/bin
+export PATH=$PATH:$PYTHON_HOME
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # export PATH="/usr/local/sbin:$PATH"
 
 
-[[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
+# [[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
 
 # [[ -x /usr/local/bin/brew ]] && eval $(/usr/local/bin/brew shellenv)
 if [ "$(arch)" = "arm64" ]; then
@@ -152,12 +154,20 @@ else
   eval $(/usr/local/bin/brew shellenv);
 fi
 
+# export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+# export PATH="$PATH:$GEM_HOME/bin"
+
+# rbenv
+# eval "$(rbenv init - zsh)"
+
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source /Users/owencraston/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # https://github.com/OWASP/SecureCodingDojo/wiki/Deploying-with-Docker
 export DATA_DIR=~/dojofiles
