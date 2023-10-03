@@ -97,11 +97,11 @@ export GIT_EDITOR=nvim
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 # config PATH
 export PATH=/usr/local/bin:$PATH
-#export PATH=/install/prefix/bin:$PATH
-export C_INCLUDE_PATH=/install/prefix/include:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=/install/prefix/include:$CPLUS_INCLUDE_PATH
-export LIBRARY_PATH=/install/prefix/lib:$LIBRARY_PATH
-export DYLD_LIBRARY_PATH=/install/prefix/lib:$LD_LIBRARY_PATH
+export PATH=/install/prefix/bin:$PATH
+# export C_INCLUDE_PATH=/install/prefix/include:$C_INCLUDE_PATH
+# export CPLUS_INCLUDE_PATH=/install/prefix/include:$CPLUS_INCLUDE_PATH
+# export LIBRARY_PATH=/install/prefix/lib:$LIBRARY_PATH
+# export DYLD_LIBRARY_PATH=/install/prefix/lib:$LD_LIBRARY_PATH
  #Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -114,6 +114,7 @@ alias refresh="source ~/.zshrc"
 alias cdp="cd ~/src/personal"
 alias cdc="cd ~/src/consensys"
 alias cdmm="cd ~/src/consensys/metamask-mobile"
+alias cdme="cd ~/src/consensys/metamask-extension"
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
@@ -157,8 +158,15 @@ fi
 # export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 # export PATH="$PATH:$GEM_HOME/bin"
 
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
+
 # rbenv
-# eval "$(rbenv init - zsh)"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)"
+
+# source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+# source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source /Users/owencraston/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
