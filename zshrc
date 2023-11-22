@@ -137,10 +137,6 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-# python 3
-export PYTHON_HOME=$HOME/Library/Python/3.8/bin
-export PATH=$PATH:$PYTHON_HOME
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 # export PATH="/usr/local/sbin:$PATH"
@@ -180,3 +176,14 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # https://github.com/OWASP/SecureCodingDojo/wiki/Deploying-with-Docker
 export DATA_DIR=~/dojofiles
 export CHALLENGE_MASTER_SALT=7f976668fecb0021c73671d2a57b845c350e5fdc0fbc8db866c37a775165cbf7
+
+# pnpm
+export PNPM_HOME="/Users/owencraston/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# Created by `pipx` on 2023-11-19 20:22:03
+export PATH="$PATH:/Users/owencraston/Library/Python/3.11/bin"
