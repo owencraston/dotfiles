@@ -7,33 +7,16 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Colour theme
 Plug 'mhartington/oceanic-next'
-" Nerdtree
-Plug 'scrooloose/nerdtree',
-" nerd tree git
-Plug 'Xuyuanp/nerdtree-git-plugin'
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-Plug 'junegunn/vim-easy-align'
+# NvTree
+Plug 'nvim-tree/nvim-web-devicons' " optional
+Plug 'nvim-tree/nvim-tree.lua'
 " airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" ctrlp
-Plug 'ctrlpvim/ctrlp.vim'
 " gitgutter
 Plug 'airblade/vim-gitgutter'
-" linting
-Plug 'w0rp/ale'
-" autocomplete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Track the engine.
-Plug 'SirVer/ultisnips'
 " editor config, in case the .editor config file is provided
 Plug 'editorconfig/editorconfig-vim'
-" Snippets are separated from the engine. Add this if you want them:
-Plug 'honza/vim-snippets'
-" Any valid git URL is allowed
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-" golang support
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Initialize plugin system
 call plug#end()
 
@@ -63,15 +46,6 @@ let g:airline_theme='oceanicnext'
 " add command to copy buffer path
 :command! CopyBuffer let @+ = expand('%:p')
 
-" autoload nerdtree but not on git commits
-autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
-" close nvim if nerdtree is the only open buffer
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" hide .pyc files
-let NERDTreeIgnore = ['\.pyc$']
-let g:ctrlp_custom_ignore = 'DS_Store\|pyc'
-" enable deoplete
-let g:deoplete#enable_at_startup = 1
 " highlight extra whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 au ColorScheme * highlight ExtraWhitespace guibg=red
