@@ -11,7 +11,8 @@ A repo for managing my dotfile configuration files.
 ## Neovim
 - `brew install neovim`
 - `mkdir ~/.config/nvim`
-## - link via `ln -s -f ~/dotfiles/init.vim ~/.config/nvim/init.vim`
+- ~~link via `ln -s -f ~/dotfiles/init.vim ~/.config/nvim/init.vim`~~
+- Optional if you previously used init.vim: `rm ~/.config/nvim/init.vim`
 - `ln -s /Users/owencraston/dotfiles/init.lua ~/.config/nvim/init.lua`
 - install [vim plug](https://github.com/junegunn/vim-plug) via `curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
