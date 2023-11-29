@@ -190,3 +190,6 @@ export PATH="$PATH:/Users/owencraston/Library/Python/3.11/bin"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# nvim
+export XDG_CONFIG_HOME="~/.config/nvim"
