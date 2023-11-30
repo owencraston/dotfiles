@@ -115,6 +115,8 @@ alias cdp="cd ~/src/personal"
 alias cdc="cd ~/src/consensys"
 alias cdmm="cd ~/src/consensys/metamask-mobile"
 alias cdme="cd ~/src/consensys/metamask-extension"
+alias cdnv="cd ~/.config/nvim"
+alias cddf="cd ~/dotfiles"
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
