@@ -98,6 +98,8 @@ export GIT_EDITOR=nvim
 # config PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/install/prefix/bin:$PATH
+# nvim
+export XDG_CONFIG_HOME="~/.config"
 # export C_INCLUDE_PATH=/install/prefix/include:$C_INCLUDE_PATH
 # export CPLUS_INCLUDE_PATH=/install/prefix/include:$CPLUS_INCLUDE_PATH
 # export LIBRARY_PATH=/install/prefix/lib:$LIBRARY_PATH
@@ -115,7 +117,7 @@ alias cdp="cd ~/src/personal"
 alias cdc="cd ~/src/consensys"
 alias cdmm="cd ~/src/consensys/metamask-mobile"
 alias cdme="cd ~/src/consensys/metamask-extension"
-alias cdnv="cd ~/.config/nvim"
+alias cdnv="cd $XDG_CONFIG_HOME/nvim"
 alias cddf="cd ~/dotfiles"
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
@@ -193,5 +195,3 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# nvim
-export XDG_CONFIG_HOME="~/.config/nvim"
