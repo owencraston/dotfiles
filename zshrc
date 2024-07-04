@@ -192,3 +192,10 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/owencraston/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/owencraston/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/owencraston/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/owencraston/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/path/to/postgres/bin:$PATH"
