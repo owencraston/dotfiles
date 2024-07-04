@@ -157,12 +157,10 @@ fi
 # export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 # export PATH="$PATH:$GEM_HOME/bin"
 
-export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/bin:$PATH
-
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
+
 
 # source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
 # source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
