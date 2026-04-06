@@ -117,6 +117,7 @@ alias cdmm="cd ~/src/consensys/metamask-mobile"
 alias cdme="cd ~/src/consensys/metamask-extension"
 alias cdnv="cd ~/.config/nvim"
 alias cddf="cd ~/dotfiles"
+alias cdcl="cd ~/src/consensys/Clawdio"
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
@@ -187,10 +188,11 @@ esac
 # pnpm end
 
 # Created by `pipx` on 2023-11-19 20:22:03
-export PATH="$PATH:/Users/owencraston/Library/Python/3.11/bin"
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PATH="$PATH:/Users/owencraston/Library/Python/3.11/bin"
+# export PYENV_ROOT="$HOME/.pyenv"
+# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+# if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -199,3 +201,7 @@ if [ -f '/Users/owencraston/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/owe
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/owencraston/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/owencraston/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/path/to/postgres/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# OpenClaw Completion
+# source "/Users/owencraston/.openclaw/completions/openclaw.zsh"
