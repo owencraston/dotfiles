@@ -118,6 +118,7 @@ alias cdme="cd ~/src/consensys/metamask-extension"
 alias cdnv="cd ~/.config/nvim"
 alias cddf="cd ~/dotfiles"
 alias cdcl="cd ~/src/consensys/Clawdio"
+alias cdmb="cd ~/src/consensys/mm-brain"
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
